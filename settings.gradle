@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        mavenLocal()
+        maven { url 'https://pkgs.d.xiaomi.net:443/artifactory/maven-snapshot-virtual' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven { url 'https://pkgs.d.xiaomi.net:443/artifactory/maven-snapshot-virtual' }
+    }
+}
+
+rootProject.name = "SDKDemo"
+include ':app'
+include ':sdklibrary'
