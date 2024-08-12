@@ -46,8 +46,12 @@ publishing {
     //publish to filesystem repo 
     repositories {
         maven {
-            url = uri('file:' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath)
-
+//            url = uri('file:' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath)
+            url = uri('https://pkgs.d.xiaomi.net:443/artifactory/maven-snapshot-virtual')
+            credentials {
+                username = "********"
+                password = "******"
+            }
         }
     }
 }
